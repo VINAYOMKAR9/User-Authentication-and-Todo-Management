@@ -6,14 +6,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><div id="mainform">
+
     <form id="form" onsubmit="loginfn()">
+        <h3>Please Log in ...</h3>
         <!-- <input type="text" placeholder="enter username"> -->
         <input id="username" type="text" placeholder="enter username">
         <input id="password" type="text" placeholder="enter password">
         <input type="submit" value="login">
     </form>
-    <div id="showDataDiv"><button id="showData">Show Data</button></div>
+</div>
+    <div id="showDataDiv">
+        <div id="hlwDataDiv"></div>
+        
+        <button id="showData">Show Data</button></div>
+
     <div id="container">
         <table>
             <thead>

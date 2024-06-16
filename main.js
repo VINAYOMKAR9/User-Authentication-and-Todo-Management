@@ -1,15 +1,18 @@
 let show = document.querySelector('#showData')
 let container =document.querySelector('#container')
 let todoTableBody =document.querySelector('#todoTableBody')
-// show.hidden=true;
+let hlwDataDiv =document.querySelector('#hlwDataDiv')
+let mainform = document.getElementById('mainform')
+let form = document.getElementById('form')
+show.hidden=true;
+
 
 
 async function loginfn(){
     event.preventDefault()
-    let form = document.getElementById('form')
     let username=form.username.value;
     let password=form.password.value;
-    console.log(username,password,'hjdkf');
+    // console.log(username,password,'hjdkf');
     try{
 
         let res = await fetch('https://json-with-auth.onrender.com/user/login',
@@ -30,6 +33,10 @@ async function loginfn(){
     catch(err){
         console.log('error in code in login fn');
     }
+
+    let hlww = document.createElement('h2');
+    hlww.textContent= `hey ${username}, welcome back!`
+    hlwDataDiv.append(hlww)
 }
 
 let dataTodo
@@ -46,6 +53,7 @@ async function fetchTodo(){
                 'Authorization':`bearer ${token}`
             }
         })
+        
         dataTodo = await resTodo.json()
         console.log(dataTodo);
         localStorage.setItem('userCon', JSON.stringify(dataTodo)); 
@@ -60,9 +68,10 @@ async function fetchTodo(){
 
 
 
-// container.hidden=true
+container.hidden=true
 show.addEventListener('click',()=>{
-    // container.hidden=false
+    mainform.hidden=true;
+    container.hidden=false
     let usercon = JSON.parse(localStorage.getItem('userCon'))
     displayData(usercon)
     
