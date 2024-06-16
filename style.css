@@ -1,0 +1,72 @@
+#container{
+    margin: auto;
+    align-items: center;
+    border: 1px solid teal;
+    text-align: center;
+    width: 60%;
+    border-radius: 5px;
+}
+
+ form{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: groove;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+
+#showDataDiv{
+    margin: auto;
+    width: 40%;
+
+
+}
+ #showData{
+    margin: auto;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-style: italic;
+    width: 40%;
+    padding: 10px;
+    
+}
+
+
+
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-left: 10px; */
+    margin: auto;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+  tr {
+    height: 50px;
+  }
